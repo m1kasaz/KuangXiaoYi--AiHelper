@@ -1,0 +1,22 @@
+logging:
+  level:
+    root: info
+
+#langchain4j:
+#  ollama:
+#    chat-model:
+#      base-url: http://localhost:11434
+#      model-name: deepseek-r1:1.5b
+#      temperature: 0.8
+#      timeout: PT60S
+langchain4j:
+  community:
+    dashscope:
+      chat-model:
+        api-key: ${DASHSCOPE_API_KEY}
+        model-name: qwen-max
+
+spring:
+  data:
+    mongodb:
+      uri: mongodb://localhost:27017/testDB
