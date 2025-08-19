@@ -15,8 +15,16 @@ langchain4j:
       chat-model:
         api-key: ${DASHSCOPE_API_KEY}
         model-name: qwen-max
+      embedding-model:
+        api-key: ${DASHSCOPE_API_KEY}
+        model-name: text-embedding-v3
 
 spring:
   data:
     mongodb:
       uri: mongodb://localhost:27017/testDB
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/kuangxiaoyi?serverTimezone=Asia/Shanghai&useUnicode=true&characterEncoding=utf-8&zeroDateTimeBehavior=convertToNull&useSSL=false&allowPublicKeyRetrieval=true
+    username: root
+    password: 123456
